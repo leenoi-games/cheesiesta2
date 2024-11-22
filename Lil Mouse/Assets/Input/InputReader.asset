@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 32
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6537c38fdb43b4791a060a3aea9dba80, type: 3}
+  m_Name: InputReader
+  m_EditorClassIdentifier: 
+  inputManager: {fileID: 11400000, guid: 4e27dc3f64eaf4f95a787de7ef1fd50c, type: 2}
+  moveEvent: {fileID: 11400000, guid: 34374b5646dbf417cae796a5fe01b2f1, type: 2}
+  pickUpEvent: {fileID: 11400000, guid: 934f7eb42130b4c84ae82587a2f2422b, type: 2}
+  dropEvent: {fileID: 11400000, guid: bfbddf82cfc94463a8c4bbdf256257fe, type: 2}

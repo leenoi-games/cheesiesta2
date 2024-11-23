@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_target: {fileID: 0}
   m_catManager: {fileID: 5702355992188466828}
-  m_range: 0
+  m_range: 27.5
 --- !u!1 &2232493477887699753
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 660460489777911534}
   - component: {fileID: 5171880164032147706}
   m_Layer: 2
-  m_Name: AwareRadius (1)
+  m_Name: KillRadius
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,7 +180,7 @@ Transform:
   m_GameObject: {fileID: 7005044400087692503}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2, y: -3.28, z: 0}
+  m_LocalPosition: {x: -0.03, y: 0.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -220,7 +220,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 18.56
+  m_Radius: 3.12
 --- !u!114 &5171880164032147706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_catManager: {fileID: 5702355992188466828}
-  m_awarenessState: 0
+  m_awarenessState: 4
 --- !u!1 &7681974286132479954
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,6 +310,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_target: {fileID: 0}
   m_rotationSpeed: 20
+  m_patrolTimeMin: 6
+  m_patrolTimeMax: 15
+  m_patrolDis: 20
 --- !u!114 &5702355992188466828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,6 +327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_animator: {fileID: 7447070111231984700}
   m_mouseManager: {fileID: 0}
+  m_killEvent: {fileID: 11400000, guid: 9de312f24117a4cc1b635791be467c1d, type: 2}
   m_currentState: {fileID: 11400000, guid: 60cd087ea032d4a0b80303bebcaa965c, type: 2}
   m_sleepState: {fileID: 11400000, guid: 60cd087ea032d4a0b80303bebcaa965c, type: 2}
   m_alertState: {fileID: 11400000, guid: 076c27495327145dc9badfda6ef09d72, type: 2}
@@ -400,7 +404,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 18.56
+  m_Radius: 28.43
 --- !u!114 &6776071449305992795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -431,7 +435,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6762811631131311355
 Transform:
   m_ObjectHideFlags: 0

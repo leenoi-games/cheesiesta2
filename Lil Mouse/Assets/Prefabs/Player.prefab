@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3319527155424798909}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.39, y: -0.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -50,12 +50,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06235c2ef108f401495a2cda541df732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_graveStone: {fileID: 4462465335219056812, guid: 41870fa931a834aa4b3821e16ca3824e, type: 3}
+  m_home: {fileID: 0}
   m_idleState: {fileID: 11400000, guid: 4eeb3d4c09179437fade6920fc8e4667, type: 2}
   m_moveState: {fileID: 11400000, guid: 64fdd13655ff94935a6bd90c93d59945, type: 2}
   m_cheeseState: {fileID: 11400000, guid: aee457f5ab8454217af75ce284bb7a17, type: 2}
   m_sneakyState: {fileID: 11400000, guid: 482dedeafded04d42ac96b6e1670bdb5, type: 2}
   m_animator: {fileID: 6497523166250899399}
   m_currentItem: {fileID: 0}
+  m_lives: {fileID: 11400000, guid: 56df08ef2b7c3432f848782cfc07d137, type: 2}
 --- !u!114 &9185588862002530307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,7 +127,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.9676606
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0

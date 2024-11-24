@@ -8,7 +8,7 @@ public class RestartButton : NetworkBehaviour
 {
     public void RestartGame() 
     {
-    	SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        NetworkManager.SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Additive);
+    	//SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        NetworkManager.SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
     }
 }

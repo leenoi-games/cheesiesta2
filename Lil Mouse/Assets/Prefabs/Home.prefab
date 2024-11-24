@@ -263,6 +263,7 @@ MonoBehaviour:
   - {fileID: 6998788211227806403}
   - {fileID: 8921320692024598533}
   - {fileID: 1950451053538335772}
+  m_spawnPos: {fileID: 11400000, guid: ac715be58b3a74761993e1d9763da5a0, type: 2}
 --- !u!114 &1048700129915736084
 MonoBehaviour:
   m_ObjectHideFlags: 0

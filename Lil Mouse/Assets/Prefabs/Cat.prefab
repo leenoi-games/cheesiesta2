@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5269a17091394c2b8356fe45f7ceefe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_target: {fileID: 0}
+  m_target: {fileID: 1501371007405781944, guid: 9eed5230bdeb143329536c1f188eeb53, type: 3}
   m_catManager: {fileID: 5702355992188466828}
   m_range: 27.5
 --- !u!1 &2232493477887699753
@@ -245,6 +245,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6679262807846295274}
   - component: {fileID: 2004345326294821835}
+  - component: {fileID: 7853188104494964521}
   - component: {fileID: 4464286433737476809}
   - component: {fileID: 5702355992188466828}
   m_Layer: 0
@@ -296,6 +297,27 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &7853188104494964521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7681974286132479954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 781740064
+  InScenePlacedSourceGlobalObjectIdHash: 0
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
 --- !u!114 &4464286433737476809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,7 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90c1ab807fe9c4cb589faaf06a7dc6d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_target: {fileID: 1501371007405781944, guid: 9eed5230bdeb143329536c1f188eeb53, type: 3}
+  m_target: {fileID: 0}
   m_rotationSpeed: 20
   m_patrolTimeMin: 6
   m_patrolTimeMax: 15

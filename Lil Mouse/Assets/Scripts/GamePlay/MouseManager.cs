@@ -10,23 +10,36 @@ public class MouseManager : NetworkBehaviour
     private MouseState m_CurrentMouseState;
     private MouseState m_lastMoveState;
     [SerializeField] GameObject m_graveStone;
-    [SerializeField] GameObject m_home;
     [SerializeField] MouseState m_idleState;
     [SerializeField] MouseState m_moveState;
     [SerializeField] MouseState m_cheeseState;
     [SerializeField] MouseState m_sneakyState;
     [SerializeField] Animator m_animator;
+    [SerializeField] Vector3Variable m_spawnPosition;
+    [SerializeField] GameEvent m_OnLoseEvent;
 
     [SerializeField] Item m_currentItem;
     [SerializeField] IntVariable m_lives;
 
-    private void Start() {
+    private void Start() 
+    {
         m_CurrentMouseState = m_idleState;
         m_lastMoveState = m_moveState;
+        transform.position = m_spawnPosition.GetValue();
     }
 
     public override void OnNetworkSpawn()
     {
+        if(m_spawnPosition != null)
+        {
+            transform.position = m_spawnPosition.GetValue();
+        }
+        else
+        {
+            Debug.LogWarning("Player Spawn Position not set; Defaulting to (0,0,0).");
+        }
+        
+        
         if(!IsOwner) Destroy(this);
     }
 
@@ -80,8 +93,13 @@ public class MouseManager : NetworkBehaviour
     {
         Instantiate(m_graveStone, transform.position, Quaternion.identity);
         DropItem();
-        transform.position = m_home.transform.position;
+        transform.position = m_spawnPosition.GetValue();
         m_lives.AddValue(-1);
+        if(m_lives.GetValue() <= 0)
+        {
+            gameObject.SetActive(false);
+            m_OnLoseEvent.Raise();
+        }
     }
 
     public bool CarriesCheese()

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wall
   - Cheese
+  - Home
   layers:
   - Default
   - TransparentFX
@@ -48,4 +49,7 @@ TagManager:
     locked: 0
   - name: FG
     uniqueID: 2958344061
+    locked: 0
+  - name: UI
+    uniqueID: 388659909
     locked: 0

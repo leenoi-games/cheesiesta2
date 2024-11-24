@@ -12,6 +12,10 @@ public class UIManager : MonoBehaviour
  
     private void Start() 
     {
+        Canvas canvas = GetComponent<Canvas>();
+        canvas.worldCamera = Camera.main;
+        canvas.sortingLayerName = "UI";
+
         m_loseUI.SetActive(false);
         m_winUI.SetActive(false);
         m_inGameUI.SetActive(false);

@@ -10,8 +10,15 @@ public class FieldOfView : MonoBehaviour
     [SerializeField] float m_range;
     private bool hasUpdated = false;
 
+    private void Start() 
+    {
+        m_target = m_catManager.GetPlayerPosition();    
+    }
+
     private void FixedUpdate() 
     {
+        if(m_target == null) return;
+        
         Vector3 playerDirection = m_target.position - transform.position ;
         RaycastHit2D ray = Physics2D.Raycast(transform.position, playerDirection);
         if(ray.collider != null)

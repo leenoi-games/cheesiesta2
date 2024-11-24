@@ -308,7 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90c1ab807fe9c4cb589faaf06a7dc6d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_target: {fileID: 0}
+  m_target: {fileID: 1501371007405781944, guid: 9eed5230bdeb143329536c1f188eeb53, type: 3}
   m_rotationSpeed: 20
   m_patrolTimeMin: 6
   m_patrolTimeMax: 15

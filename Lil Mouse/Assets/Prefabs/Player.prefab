@@ -80,6 +80,8 @@ MonoBehaviour:
   m_cheeseState: {fileID: 11400000, guid: aee457f5ab8454217af75ce284bb7a17, type: 2}
   m_sneakyState: {fileID: 11400000, guid: 482dedeafded04d42ac96b6e1670bdb5, type: 2}
   m_animator: {fileID: 6497523166250899399}
+  m_spawnPosition: {fileID: 11400000, guid: ac715be58b3a74761993e1d9763da5a0, type: 2}
+  m_OnLoseEvent: {fileID: 11400000, guid: 0bfc60bc8658c4f24ad8384cfcc6d06b, type: 2}
   m_currentItem: {fileID: 0}
   m_lives: {fileID: 11400000, guid: 56df08ef2b7c3432f848782cfc07d137, type: 2}
 --- !u!114 &9185588862002530307

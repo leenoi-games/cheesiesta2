@@ -4,8 +4,9 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UIElements;
+using Unity.Netcode;
 
-public class CatMovement : MonoBehaviour
+public class CatMovement : NetworkBehaviour
 {
     [SerializeField] Transform m_target;
     private CatManager m_catManager;
@@ -19,6 +20,15 @@ public class CatMovement : MonoBehaviour
 
      [SerializeField] float m_patrolDis = 6;
     private float m_patrolTimer = 0;
+    public override void OnNetworkSpawn()
+    {
+        if(IsOwner)
+        {
+            NetworkObject player = NetworkManager.Singleton.LocalClient.PlayerObject;
+            m_target = player.gameObject.transform;
+        }
+    }
+
 
     private void Start()
     {

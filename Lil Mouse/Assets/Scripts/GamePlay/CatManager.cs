@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Netcode;
+using UnityEngine.InputSystem;
 
-public class CatManager : MonoBehaviour
+public class CatManager : NetworkBehaviour
 {
     [SerializeField] Animator m_animator;
     [SerializeField] MouseManager m_mouseManager;
-
     [SerializeField] GameEvent m_killEvent;
 
 
@@ -25,6 +26,18 @@ public class CatManager : MonoBehaviour
 
     private bool m_inHearingRange;
     private bool m_inSeeingRange;
+
+    private Transform m_playerPosition;
+
+    public override void OnNetworkSpawn()
+    {
+        if(IsOwner)
+        {
+            NetworkObject player = NetworkManager.Singleton.LocalClient.PlayerObject;
+            m_mouseManager = player.gameObject.GetComponent<MouseManager>();
+            m_playerPosition = player.transform;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -109,6 +122,11 @@ public class CatManager : MonoBehaviour
         m_seeTimer = 0.0f;
         m_silenceTimer = 0.0f;
         m_blindTimer = 0.0f;
+    }
+
+    public Transform GetPlayerPosition()
+    {
+        return m_playerPosition;
     }
 
     public void MouseInRange(AwarenessState awarenessState)

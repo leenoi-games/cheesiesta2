@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Netcode;
 
 
-public class MouseMovement : MonoBehaviour
+public class MouseMovement : NetworkBehaviour
 {
     [Header("Chracteristics")]
     [SerializeField] private float m_rotationSpeed = 20f;
@@ -11,6 +12,10 @@ public class MouseMovement : MonoBehaviour
     private MouseManager m_mouseManager;
 
     Rigidbody2D m_rb;
+    public override void OnNetworkSpawn()
+    {
+        if(!IsOwner) Destroy(this);
+    }
     
     private void Start() 
     {

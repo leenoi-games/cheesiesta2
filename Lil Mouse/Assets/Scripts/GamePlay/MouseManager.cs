@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Unity.Netcode;
 
 
-public class MouseManager : MonoBehaviour
+public class MouseManager : NetworkBehaviour
 {
     private MouseState m_CurrentMouseState;
     private MouseState m_lastMoveState;
@@ -22,6 +23,11 @@ public class MouseManager : MonoBehaviour
     private void Start() {
         m_CurrentMouseState = m_idleState;
         m_lastMoveState = m_moveState;
+    }
+
+    public override void OnNetworkSpawn()
+    {
+        if(!IsOwner) Destroy(this);
     }
 
     public void UpdateMoveState(MouseState mouseState)
